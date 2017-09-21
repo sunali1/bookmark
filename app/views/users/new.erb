@@ -1,6 +1,6 @@
 <h1>Please sign up</h1>
 
-<form action='/users' method='post'>
+<form action='/users' method='post' value='<%= @user.email %>'>
   <label for='email'>
     Email: <input name='email' type='text'>
   </label>
