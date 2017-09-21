@@ -81,6 +81,7 @@ GEM
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
+    rake (12.1.0)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -117,6 +118,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  rake
   rspec
   selenium-webdriver
   sinatra
