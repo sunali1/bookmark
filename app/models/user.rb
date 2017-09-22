@@ -17,7 +17,7 @@ class User
   # validates_format_of :email, as: :email_address --> unnecessary because of line 19
 
   property :id, Serial
-  property :email, String, format: :email_address, required: true
+  property :email, String, format: :email_address, unique: true, required: true
   property :password_digest, Text
 
   def password=(password)
