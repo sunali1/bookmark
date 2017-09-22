@@ -37,6 +37,9 @@ class BookmarkManager < Sinatra::Base
 
   post '/links' do
    link = Link.create(url: params[:url], title: params[:title])
+  #  params[:tags].split.each do |tag|
+  #    link.update(tag: Tag.first_or_create(name: tag))
+  #  end  --> why don't these lines work? Error: 'tag' not accessible in Link
    params[:tags].split.each do |tag|
      link.tags << Tag.first_or_create(name: tag)
    end

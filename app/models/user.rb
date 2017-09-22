@@ -13,9 +13,11 @@ class User
 # read more about it in the documentation
 # http://datamapper.org/docs/validations.html
   validates_confirmation_of :password
+  # validates_presence_of :email --> unnecessary because of line 19
+  # validates_format_of :email, as: :email_address --> unnecessary because of line 19
 
   property :id, Serial
-  property :email, String
+  property :email, String, format: :email_address, required: true
   property :password_digest, Text
 
   def password=(password)
